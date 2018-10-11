@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class DictionaryManagement {
 
-    public static void insertFromCommandline() {
+    public  void insertFromCommandline() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao so luong tu: ");
         int soTu;
@@ -37,14 +37,15 @@ public class DictionaryManagement {
     }
 
     public void insertFromFile() {
-        String pathName = "D:\\OOP\\Java- Summer 2018\\Dictionary_Requeriment\\data\\dictionaries.txt";
+        String pathName = "D:\\OOP\\Java- Summer 2018\\Dictionary_English_Vietnamese\\data\\dictionaries.txt";
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(pathName));
             String textInALine;
             while ((textInALine = br.readLine()) != null) {
-                System.out.println(textInALine);
-                textInALine = br.readLine();
+                Word word = new Word(getSpelling(textInALine), getExplaining(textInALine));
+                Dictionary.myList.add(word);
+                
             }
         } catch (IOException e) {
             e.getStackTrace();
@@ -56,7 +57,34 @@ public class DictionaryManagement {
             }
 
         }
+//        String s = "Vu van Hoc";
+//        System.out.println(getExplaining(s));
+//        System.out.println(getSpelling(s));
 
     }
+    public String getSpelling(String textInALine) {
+        int index = 0;
+        for(int i=0; i<textInALine.length(); i++)
+        {
+            if(textInALine.charAt(i) == '\t') {
+                index = i;
+                break;
+            }
+        }
+        return textInALine.substring(0, index + 1 );
+        
+    }
+    
+    public String getExplaining(String textInALine) {
+        int index = 0;
+        for(int i=0; i<textInALine.length(); i++)
+        {
+            if(textInALine.charAt(i) == '\t') {
+                index = i;
+                break;
+            }
+        }
+        return textInALine.substring(index + 1, textInALine.length());
+    } 
 
 }

@@ -10,7 +10,7 @@
  */
 public class DictionaryCommandline extends DictionaryManagement{
 
-    public static void showAllWords() {
+    public  void showAllWords() {
         System.out.println("No \t | English \t\t |Vietnamese");
         for(int i=0; i< Dictionary.myList.size(); i++)
         {
@@ -19,11 +19,10 @@ public class DictionaryCommandline extends DictionaryManagement{
         }
     }
     
-    public static void dictionaryBasic(){
-        insertFromCommandline();
-        showAllWords();
+    public  void dictionaryBasic(){
+//        insertFromCommandline();
+//        showAllWords();
+        
     }
-    public static void main(String[] args) {
-        dictionaryBasic();
-    }
+    
 }
