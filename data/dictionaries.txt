@@ -1,0 +1,5 @@
+apple	qua tao
+angry	tuc gian
+bus	xe buyt
+cat	con meo
+dog	con cho
