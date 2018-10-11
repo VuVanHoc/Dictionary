@@ -36,27 +36,27 @@ public class DictionaryManagement {
 
     }
 
-//    public void insertFromFile() {
-//        String pathName = "D:\\OOP\\Java- Summer 2018\\Dictionary_Requeriment\\data\\dictionaries.txt";
-//        BufferedReader br = null;
-//        try {
-//            br = new BufferedReader(new FileReader(pathName));
-//            String textInALine;
-//            while ((textInALine = br.readLine()) != null) {
-//                System.out.println(textInALine);
-//                textInALine = br.readLine();
-//            }
-//        } catch (IOException e) {
-//            e.getStackTrace();
-//        } finally {
-//            try {
-//                br.close();
-//            } catch (IOException e) {
-//                e.getStackTrace();
-//            }
-//
-//        }
-//
-//    }
+    public void insertFromFile() {
+        String pathName = "D:\\OOP\\Java- Summer 2018\\Dictionary_Requeriment\\data\\dictionaries.txt";
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(pathName));
+            String textInALine;
+            while ((textInALine = br.readLine()) != null) {
+                System.out.println(textInALine);
+                textInALine = br.readLine();
+            }
+        } catch (IOException e) {
+            e.getStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+                e.getStackTrace();
+            }
+
+        }
+
+    }
 
 }
