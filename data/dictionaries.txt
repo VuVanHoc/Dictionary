@@ -5,3 +5,5 @@ cat	con meo
 dog	con cho
 hello	xin chao
 cow	con bo
+chicken	con ga
+duck	con vit

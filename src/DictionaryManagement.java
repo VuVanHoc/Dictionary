@@ -13,9 +13,9 @@ import java.util.Scanner;
  *
  * @author DELL
  */
-public class DictionaryManagement {
+public class DictionaryManagement extends Dictionary{
 
-    public  void insertFromCommandline() {
+    public void insertFromCommandline() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao so luong tu: ");
         int soTu;
@@ -45,7 +45,7 @@ public class DictionaryManagement {
             while ((textInALine = br.readLine()) != null) {
                 Word word = new Word(getSpelling(textInALine), getExplaining(textInALine));
                 Dictionary.myList.add(word);
-                
+
             }
         } catch (IOException e) {
             e.getStackTrace();
@@ -57,34 +57,45 @@ public class DictionaryManagement {
             }
 
         }
-//        String s = "Vu van Hoc";
-//        System.out.println(getExplaining(s));
-//        System.out.println(getSpelling(s));
 
     }
+
     public String getSpelling(String textInALine) {
         int index = 0;
-        for(int i=0; i<textInALine.length(); i++)
-        {
-            if(textInALine.charAt(i) == '\t') {
+        for (int i = 0; i < textInALine.length(); i++) {
+            if (textInALine.charAt(i) == '\t') {
                 index = i;
                 break;
             }
         }
-        return textInALine.substring(0, index + 1 );
-        
+        return textInALine.substring(0, index + 1);
+
     }
-    
+
     public String getExplaining(String textInALine) {
         int index = 0;
-        for(int i=0; i<textInALine.length(); i++)
-        {
-            if(textInALine.charAt(i) == '\t') {
+        for (int i = 0; i < textInALine.length(); i++) {
+            if (textInALine.charAt(i) == '\t') {
                 index = i;
                 break;
             }
         }
         return textInALine.substring(index + 1, textInALine.length());
-    } 
+    }
 
+    public void dictionaryLookup() {
+        System.out.print("Nhap tu ban muon tim kiem: ");
+        Scanner sc = new Scanner(System.in);
+        String findWord = "";
+        findWord = sc.nextLine();
+        System.out.println(Dictionary.myList.size());
+        for (int i = 0; i < Dictionary.myList.size(); i++) {
+            if (Dictionary.myList.get(i).getSpelling().equals(findWord)) {
+                System.out.println(Dictionary.myList.get(i).getExplain());
+                return;
+            }
+        }
+        System.out.println("Khong tim thay tu: " + findWord);
+
+    }
 }

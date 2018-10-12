@@ -19,10 +19,15 @@ public class DictionaryCommandline extends DictionaryManagement{
         }
     }
     
-    public  void dictionaryBasic(){
-//        insertFromCommandline();
-//        showAllWords();
-        
+    public void dictionaryBasic(){
+        insertFromCommandline();
+        showAllWords();
+    }
+    
+    public void dictionaryAdvanced() {
+        insertFromFile();
+        showAllWords();
+        dictionaryLookup();
     }
     
 }

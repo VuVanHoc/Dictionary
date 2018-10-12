@@ -9,9 +9,10 @@
  * @author DELL
  */
 public class TestDrive {
+
     public static void main(String[] args) {
         DictionaryCommandline dc = new DictionaryCommandline();
-        dc.insertFromFile();
-        dc.showAllWords();
+//        dc.dictionaryBasic();
+        dc.dictionaryAdvanced();
     }
 }
