@@ -8,26 +8,25 @@
  *
  * @author DELL
  */
-public class DictionaryCommandline extends DictionaryManagement{
+public class DictionaryCommandline extends DictionaryManagement {
 
-    public  void showAllWords() {
-        System.out.println("No \t | English \t\t |Vietnamese");
-        for(int i=0; i< Dictionary.myList.size(); i++)
-        {
-            System.out.println((i+1) + " \t | " + Dictionary.myList.get(i).getSpelling()
-                 + " \t\t |" + Dictionary.myList.get(i).getExplain());
+    public void showAllWords() {
+        System.out.println("No" + "\t|" + "English" + "\t\t|" + "Vietnamese");
+        for (int i = 0; i < Dictionary.myList.size(); i++) {
+            System.out.println((i + 1) + "\t|" + Dictionary.myList.get(i).getSpelling()
+                    + "\t\t|" + Dictionary.myList.get(i).getExplain());
         }
     }
-    
-    public void dictionaryBasic(){
+
+    public void dictionaryBasic() {
         insertFromCommandline();
         showAllWords();
     }
-    
+
     public void dictionaryAdvanced() {
         insertFromFile();
         showAllWords();
         dictionaryLookup();
     }
-    
+
 }

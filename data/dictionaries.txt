@@ -7,3 +7,6 @@ hello	xin chao
 cow	con bo
 chicken	con ga
 duck	con vit
+daughter	con gai
+son	con trai
+king	nha vua

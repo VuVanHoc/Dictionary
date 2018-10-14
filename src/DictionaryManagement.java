@@ -68,7 +68,7 @@ public class DictionaryManagement extends Dictionary{
                 break;
             }
         }
-        return textInALine.substring(0, index + 1);
+        return textInALine.substring(0, index );
 
     }
 
