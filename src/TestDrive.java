@@ -14,5 +14,6 @@ public class TestDrive {
         DictionaryCommandline dc = new DictionaryCommandline();
 //        dc.dictionaryBasic();
         dc.dictionaryAdvanced();
+
     }
 }

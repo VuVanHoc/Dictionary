@@ -1,12 +1,9 @@
 apple	qua tao
-angry	tuc gian
-bus	xe buyt
-cat	con meo
-dog	con cho
-hello	xin chao
-cow	con bo
-chicken	con ga
-duck	con vit
-daughter	con gai
 son	con trai
-king	nha vua
+father	bo
+mother	me, ma
+sister	chi, em gai
+brother	anh, em trai
+dog	con cho
+cat	con meo
+duck	con vit
