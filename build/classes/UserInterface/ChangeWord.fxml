@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="404.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="34.0" layoutY="20.0" prefHeight="30.0" prefWidth="102.0" text="Từ muốn thay đổi">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="56.0" prefHeight="30.0" prefWidth="77.0" text="Nghĩa mới ">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="149.0" layoutY="19.0" prefHeight="25.0" prefWidth="204.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="149.0" layoutY="62.0" prefHeight="25.0" prefWidth="204.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="30.0" layoutY="110.0" text="Bạn có chắc muốn thay đổi từ này trong từ điển không?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="100.0" layoutY="151.0" mnemonicParsing="false" text="Thay đổi">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button cancelButton="true" layoutX="215.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="73.0" text="Hủy">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

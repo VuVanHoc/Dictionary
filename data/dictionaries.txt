@@ -3,7 +3,10 @@ son	con trai
 father	bo
 mother	me, ma
 sister	chi, em gai
-brother	anh, em trai
+brother	anh trai
 dog	con cho
 cat	con meo
 duck	con vit
+go	di chuyen
+hello	xin chao
+goodbye	tam biet

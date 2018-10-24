@@ -40,8 +40,10 @@ public class DictionaryCommandline extends DictionaryManagement {
                     dictionaryLookup();
                     break;
                 case 2: 
+                    addNewWord();
                     break;
                 case 3:
+                    deleteWord();
                     break;
                 case 4:
                     changeDataDictionary();
@@ -77,6 +79,9 @@ public class DictionaryCommandline extends DictionaryManagement {
         System.out.println("*   Thoat khoi he thong: Bam phim 6             *");
         System.out.println("*************************************************");
         System.out.print("Moi ban lua chon: ");
+    }
+    public void dictionarySearcher() {
+        
     }
 
 }

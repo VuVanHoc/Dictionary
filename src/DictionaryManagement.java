@@ -137,11 +137,38 @@ public class DictionaryManagement extends Dictionary {
     }
 
     public void addNewWord() {
+        System.out.println("Nhap tu ban muon them vao tu dien:");
+        Scanner sc = new Scanner(System.in);
+        String spell = sc.nextLine();
+        spell = spell.toLowerCase();
+        System.out.println("Nhap nghia cua tu:");
+        String explain = sc.nextLine();
+        explain = explain.toLowerCase();
+        Word word = new Word(spell, explain);
+        Dictionary.myList.add(word);
+        dictionaryExportToFile();
 
     }
 
     public void deleteWord() {
+        System.out.println("Nhap tu ban muon xoa khoi tu dien: ");
+        Scanner sc = new Scanner(System.in);
+        String spell = sc.nextLine();
+        spell = spell.toLowerCase();
 
+        if (isInDictionary(spell)) {
+            for (int i = 0; i < Dictionary.myList.size(); i++) {
+                if (Dictionary.myList.get(i).getSpelling().equals(spell)) {
+                    Dictionary.myList.remove(i);
+                    break;
+                }
+            }
+            dictionaryExportToFile();
+        } else {
+            System.out.println("Xin loi ban!!! He thong khong co tu ban muon xoa.");
+
+        }
+        
     }
 
     public void dictionaryExportToFile() {
@@ -153,7 +180,7 @@ public class DictionaryManagement extends Dictionary {
             for (int i = 0; i < Dictionary.myList.size(); i++) {
                 String s;
                 s = Dictionary.myList.get(i).getSpelling() + "\t" + Dictionary.myList.get(i).getExplain();
-                System.out.println(s);
+                
                 bw.write(s);
                 bw.newLine();
 

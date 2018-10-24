@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="403.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button defaultButton="true" layoutX="112.0" layoutY="130.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" text="Xóa " textOverrun="WORD_ELLIPSIS" />
+      <Label alignment="CENTER" layoutX="101.0" layoutY="25.0" prefHeight="25.0" prefWidth="202.0" text="Nhập từ bạn muốn xóa" textAlignment="CENTER" textFill="#0e2cee">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="112.0" layoutY="50.0" prefHeight="32.0" prefWidth="184.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="89.0" layoutY="95.0" text="Bạn có chắc muốn xóa từ này không?" textFill="#0917d7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button cancelButton="true" layoutX="229.0" layoutY="130.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="67.0" text="Hủy" />
+   </children>
+</AnchorPane>

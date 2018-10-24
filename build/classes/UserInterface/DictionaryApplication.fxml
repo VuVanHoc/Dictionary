@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApplicationController">
+   <children>
+      <GridPane hgap="4.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="168.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="413.0" minWidth="0.0" prefWidth="66.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="522.0" minWidth="10.0" prefWidth="456.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="43.0" minHeight="7.0" prefHeight="24.0" />
+            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="36.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="442.0" minHeight="10.0" prefHeight="440.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar prefHeight="59.0" prefWidth="264.0" GridPane.columnSpan="2">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                     </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleDeleteWord" text="Delete word" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleAddWordItem" text="Add new word" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleChangeWord" text="Change word" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="More">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Information" />
+                  </items>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+            <TextField prefHeight="22.0" prefWidth="152.0" text="Search" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Button alignment="CENTER" defaultButton="true" graphicTextGap="2.0" mnemonicParsing="false" text="Search" textAlignment="CENTER" textFill="#cc2124" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="86.0" prefWidth="460.0" GridPane.columnIndex="2" GridPane.rowSpan="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="250.0" layoutY="10.0" prefHeight="86.0" prefWidth="460.0" vbarPolicy="NEVER" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <content>
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" top="2.0" />
+         </padding>
+      </GridPane>
+   </children>
+</Group>
