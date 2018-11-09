@@ -1,6 +1,6 @@
 apple	qua tao
 son	con trai
-father	bo
+father	bo, ba 
 mother	me, ma
 sister	chi, em gai
 brother	anh trai

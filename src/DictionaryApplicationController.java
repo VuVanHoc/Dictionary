@@ -1,8 +1,11 @@
 
 import java.io.IOException;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /*
@@ -16,6 +19,7 @@ import javafx.stage.Stage;
  */
 public class DictionaryApplicationController {
 
+    
     public void handleAddWordItem() throws IOException {
         try {
             FXMLLoader fxmll = new FXMLLoader(getClass().getResource("UserInterface/AddNewWord.fxml"));
@@ -61,5 +65,24 @@ public class DictionaryApplicationController {
             e.printStackTrace();
         }
     }
+    
+    
+    @FXML private Label searchLabel = new Label();
+    @FXML private Label resultFinding = new Label();
+    @FXML private TextField searchField = new TextField();
+    public void handleSearchButton() {
+        
+        try {
+           searchLabel.setText(searchField.getText().trim().toLowerCase());
+           searchLabel.setVisible(true);
+           resultFinding.setText(DictionaryManagement.dictionaryLookup(searchField.getText().trim().toLowerCase()));
+           resultFinding.setVisible(true);
+        } catch (Exception e) {
+        }
+    }
+    
+   
+    
+    
     
 }

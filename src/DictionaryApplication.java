@@ -26,8 +26,8 @@ public class DictionaryApplication extends Application {
             
             primaryStage.setScene(scene);
             primaryStage.setTitle("Dictionary English - Vietnamese");
-//            primaryStage.setMaxHeight(510);
-//            primaryStage.setMaxWidth(700);
+            primaryStage.setMaxHeight(510);
+            primaryStage.setMaxWidth(700);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -41,6 +41,8 @@ public class DictionaryApplication extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        DictionaryManagement dm = new DictionaryManagement();
+        dm.importFromFile();
         launch(args);
     }
     

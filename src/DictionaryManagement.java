@@ -40,7 +40,7 @@ public class DictionaryManagement extends Dictionary {
 
     }
 
-    public void insertFromFile() {
+    public void importFromFile() {
         String pathName = "data/dictionaries.txt";
         BufferedReader br = null;
         try {
@@ -87,19 +87,16 @@ public class DictionaryManagement extends Dictionary {
         return textInALine.substring(index + 1, textInALine.length());
     }
 
-    public void dictionaryLookup() {
-        System.out.print("Nhap tu ban muon tim kiem: ");
-        Scanner sc = new Scanner(System.in);
-        String findWord;
-        findWord = sc.nextLine();
-        findWord = findWord.toLowerCase();
+    public static String dictionaryLookup(String wordFinding) {
+
+        wordFinding = wordFinding.toLowerCase();
         for (int i = 0; i < Dictionary.myList.size(); i++) {
-            if (Dictionary.myList.get(i).getSpelling().equals(findWord)) {
-                System.out.println(Dictionary.myList.get(i).getExplain());
-                return;
+            if (Dictionary.myList.get(i).getSpelling().toLowerCase().trim().equals(wordFinding)) {
+
+                return Dictionary.myList.get(i).getExplain();
             }
         }
-        System.out.println("Khong tim thay tu: " + findWord);
+        return "Xin lỗi. Từ bạn cần tìm không có trong từ điển!";
     }
 
     public boolean isInDictionary(String word) {
@@ -168,7 +165,7 @@ public class DictionaryManagement extends Dictionary {
             System.out.println("Xin loi ban!!! He thong khong co tu ban muon xoa.");
 
         }
-        
+
     }
 
     public void dictionaryExportToFile() {
@@ -180,7 +177,7 @@ public class DictionaryManagement extends Dictionary {
             for (int i = 0; i < Dictionary.myList.size(); i++) {
                 String s;
                 s = Dictionary.myList.get(i).getSpelling() + "\t" + Dictionary.myList.get(i).getExplain();
-                
+
                 bw.write(s);
                 bw.newLine();
 
